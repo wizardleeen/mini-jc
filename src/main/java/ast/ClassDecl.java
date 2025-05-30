@@ -2,13 +2,14 @@ package ast;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import sym.Clazz;
 
 import java.util.List;
 import java.util.function.Consumer;
 
 @Data
 @AllArgsConstructor
-public class ClassDecl implements Decl {
+public class ClassDecl extends DeclBase<Clazz> {
     private List<Modifier> mods;
     private String name;
     private List<Decl> members;
